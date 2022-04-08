@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Curso {
-	
+//	#teste git
 	private int tempoTotal;
 	private String nome;
 	private String instrutor;
@@ -15,7 +15,7 @@ public class Curso {
 
 	public Curso(String nome, String instrutor) {
 		this.nome = nome;
-		this.instrutor = instrutor; 
+		this.instrutor = instrutor;
 	}
 
 	public List<Aula> getAulas() {
