@@ -1,0 +1,18 @@
+
+k	java:S106"9Replace this use of System.out or System.err by a logger.(é⁄Øæ8Ùµ•ÅÄ0HÍRMAJORZ
+CODE_SMELL
+F
+java:S1220""Move this file to a named package.HÎRMINORZ
+CODE_SMELL
+s	java:S125"<This block of commented-out lines of code should be removed.(π‚ñŸ˙ˇˇˇˇ8Ùµ•ÅÄ0HÏRMAJORZ
+CODE_SMELL
+k
+java:S1481"3Remove this unused "twoEvenSquares" local variable.(·¶äŸ¸ˇˇˇˇ8Ùµ•ÅÄ0HÌRMINORZ
+CODE_SMELL
+p	java:S106"9Replace this use of System.out or System.err by a logger.(ÓÑú⁄¸ˇˇˇˇ8Ùµ•ÅÄ0HÔRMAJORZ
+CODE_SMELL
+z
+java:S1854"BRemove this useless assignment to local variable "twoEvenSquares".(·¶äŸ¸ˇˇˇˇ8Ùµ•ÅÄ0HRMAJORZ
+CODE_SMELL
+s	java:S125"<This block of commented-out lines of code should be removed.(©¶®Ω˘ˇˇˇˇ8≤ù•ÅÄ0HÒRMAJORZ
+CODE_SMELL

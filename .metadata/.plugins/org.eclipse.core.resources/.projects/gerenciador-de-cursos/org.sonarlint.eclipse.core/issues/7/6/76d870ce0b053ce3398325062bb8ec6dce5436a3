@@ -1,0 +1,7 @@
+
+g
+java:S1128"4Remove this unused import 'java.text.MessageFormat'.(Íðûå8ïõÂ’þ/H´RMINORZ
+CODE_SMELL
+…
+java:S1210"YOverride "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.(Ö¹±³H¶RMINORZ
+CODE_SMELL

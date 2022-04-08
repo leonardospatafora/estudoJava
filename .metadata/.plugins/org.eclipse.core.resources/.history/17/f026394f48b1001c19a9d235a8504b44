@@ -1,0 +1,36 @@
+package br.com.alura;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class TestaCurso2 {
+
+	public static void main(String[] args) {
+		
+//		#Linkedlist = Ideal para adicionar/apagar elementos do começo.
+//		#ArrayList = É mais performatico para encontrar elementos na lista.
+		
+		Curso javaColecoes = new Curso("Dominando as coleções","Leonardo");
+		
+		javaColecoes.adiciona(new Aula("Trabalh ando com ArrayList", 21));
+		javaColecoes.adiciona(new Aula("Criando uma aula", 20));
+		javaColecoes.adiciona(new Aula("Modelando coleções", 24));
+		
+		List<Aula> aulasImutaveis = javaColecoes.getAulas();
+		List<Aula> aulas = new ArrayList<>(aulasImutaveis);
+		
+		Collections.sort(aulas);
+//		System.out.println(aulas);
+		
+		int tempo = 0;
+		for(Aula aula: aulas) {
+			tempo = aula.getTempo();
+			System.out.println(aula.getTempo());
+			tempo =+;
+		}
+//		System.out.println(tempo);
+		
+	}
+
+}

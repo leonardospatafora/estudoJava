@@ -1,0 +1,9 @@
+package br.com.alura;
+
+public class Curso {
+
+	private String nome;
+	private String instrutor;
+	
+	
+}

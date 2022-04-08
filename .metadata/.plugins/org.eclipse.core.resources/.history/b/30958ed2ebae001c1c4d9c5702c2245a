@@ -1,0 +1,12 @@
+package br.com.alura;
+
+public class TestaLinhaDeAula {
+
+	public static void main(String[] args) {
+		
+		Aula a1 = new Aula("Revisandos os ArrayLists")
+		
+		
+	}
+
+}

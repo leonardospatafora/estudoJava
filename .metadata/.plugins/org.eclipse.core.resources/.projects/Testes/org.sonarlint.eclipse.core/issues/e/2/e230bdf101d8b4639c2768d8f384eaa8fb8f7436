@@ -1,0 +1,36 @@
+
+n	java:S125"<This block of commented-out lines of code should be removed.(ÏİÕ8ñø­ºı/HÊRMAJORZ
+CODE_SMELL
+F
+java:S1220""Move this file to a named package.HÏRMINORZ
+CODE_SMELL
+b
+java:S3740."/Provide the parametrized type for this generic.(å²°Õ8õ¨ßºı/HĞRMAJORZ
+CODE_SMELL
+˜
+java:S1149."eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(å²°Õ8õ¨ßºı/HÑRMAJORZ
+CODE_SMELL
+n	java:S125"<This block of commented-out lines of code should be removed.(ÿœì8¹Çïºı/HÒRMAJORZ
+CODE_SMELL
+_
+java:S1481
+",Remove this unused "linhas2" local variable.(Ã•Ô³8ƒõºı/HÓRMINORZ
+CODE_SMELL
+s
+java:S1854";Remove this useless assignment to local variable "linhas2".(ŸÆ—úÿÿÿÿ8ƒõºı/HÔRMAJORZ
+CODE_SMELL
+k	java:S106"9Replace this use of System.out or System.err by a logger.(öàïÆ8ôÊìºı/HÕRMAJORZ
+CODE_SMELL
+
+java:S1149	"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(·“Õ¹ÿÿÿÿÿ8³Úœºı/HÖRMAJORZ
+CODE_SMELL
+a
+java:S1905")Remove this unnecessary cast to "Vector".(ŸÆ—úÿÿÿÿ8¾èóºı/H×RMINORZ
+CODE_SMELL
+˜
+java:S1149
+"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(Ã•Ô³8ƒõºı/HÙRMAJORZ
+CODE_SMELL
+_
+java:S1172.",Remove this unused method parameter "dados".(å²°Õ8õ¨ßºı/HÚRMAJORZ
+CODE_SMELL

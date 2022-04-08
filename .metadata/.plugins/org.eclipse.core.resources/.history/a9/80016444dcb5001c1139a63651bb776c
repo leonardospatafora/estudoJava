@@ -1,0 +1,14 @@
+package br.com.alura;
+
+public class testeLeo {
+
+	public static void main(String[] args) {
+		Curso c = new Curso();
+		Curso b = new Curso();
+		
+		boolean teste = c != null && b != null;
+		System.out.println(teste);
+
+	}
+
+}

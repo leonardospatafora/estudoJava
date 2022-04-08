@@ -1,0 +1,16 @@
+
+b
+java:S1481"*Remove this unused "aulas" local variable.(ƒâÄ‹ÿÿÿÿÿ8ƒÈÔ’þ/H¸RMINORZ
+CODE_SMELL
+q
+java:S1854"9Remove this useless assignment to local variable "aulas".(ƒâÄ‹ÿÿÿÿÿ8ƒÈÔ’þ/H½RMAJORZ
+CODE_SMELL
+j
+java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓþÿÿÿÿ8ž¥â’þ/H¾RMINORZ
+CODE_SMELL
+s	java:S125"<This block of commented-out lines of code should be removed.(¿Ü‡Ñøÿÿÿÿ8Ø®¼’þ/HºRMAJORZ
+CODE_SMELL
+p	java:S106"9Replace this use of System.out or System.err by a logger.(¼’Ü“üÿÿÿÿ8«”Ù’þ/H·RMAJORZ
+CODE_SMELL
+s	java:S125"<This block of commented-out lines of code should be removed.(ŽžØüÿÿÿÿÿ8Šä¼Ûÿ/HÅRMAJORZ
+CODE_SMELL
