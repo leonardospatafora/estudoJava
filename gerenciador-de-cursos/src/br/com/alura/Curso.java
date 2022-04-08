@@ -15,7 +15,7 @@ public class Curso {
 
 	public Curso(String nome, String instrutor) {
 		this.nome = nome;
-		this.instrutor = instrutor;
+		this.instrutor = instrutor; 
 	}
 
 	public List<Aula> getAulas() {
