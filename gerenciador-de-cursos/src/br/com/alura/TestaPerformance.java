@@ -1,14 +1,15 @@
 package br.com.alura;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
 
 public class TestaPerformance {
 
     public static void main(String[] args) {
 
-        Collection<Integer> numeros = new HashSet<Integer>();
-//        Collection<Integer> numeros = new ArrayList<Integer>();
+//        Collection<Integer> numeros = new HashSet<Integer>();
+        Collection<Integer> numeros = new ArrayList<Integer>();
+//         Map numeros = new TreeMap<>();
         
         long inicio = System.currentTimeMillis();
 
