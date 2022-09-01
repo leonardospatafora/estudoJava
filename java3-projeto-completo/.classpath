@@ -4,5 +4,6 @@
 	<classpathentry kind="src" path="bytebank-encapsulado/src"/>
 	<classpathentry kind="src" path="bytebank-herdado-conta/src"/>
 	<classpathentry kind="src" path="bytebank-herdado/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bytebank-encapsulado/bin"/>
 </classpath>
