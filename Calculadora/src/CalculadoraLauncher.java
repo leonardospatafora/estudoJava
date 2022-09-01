@@ -1,12 +1,12 @@
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
-public class PrimeiroFrame {
+public class CalculadoraLauncher {
 
 	private JFrame frame;
 	private JTextField textField;
@@ -29,6 +29,7 @@ public class PrimeiroFrame {
 	private JButton btnNewButton_16;
 	private JButton btnNewButton_17;
 
+
 	/**
 	 * Launch the application.
 	 */
@@ -36,7 +37,7 @@ public class PrimeiroFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					PrimeiroFrame window = new PrimeiroFrame();
+					CalculadoraLauncher window = new CalculadoraLauncher();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -48,9 +49,13 @@ public class PrimeiroFrame {
 	/**
 	 * Create the application.
 	 */
-	public PrimeiroFrame() {
+	public CalculadoraLauncher() {
 		initialize();
 	}
+	
+	double valor1;
+	double valor2;
+	String sinal;
 
 	/**
 	 * Initialize the contents of the frame.
@@ -204,7 +209,9 @@ public class PrimeiroFrame {
 		btnNewButton_15 = new JButton("+");
 		btnNewButton_15.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText() + "+");
+				valor1 = Double.parseDouble(textField.getText());
+				textField.setText("");
+				sinal = "soma";
 			}
 		});
 		btnNewButton_15.setBounds(239, 228, 47, 25);
@@ -213,7 +220,10 @@ public class PrimeiroFrame {
 		btnNewButton_16 = new JButton("=");
 		btnNewButton_16.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText() + "=");
+				valor2 = Double.parseDouble(textField.getText());
+				if (sinal == "soma") {
+					textField.setText(String.valueOf(valor1+valor2));
+				}
 			}
 		});
 		btnNewButton_16.setBounds(298, 228, 108, 25);
