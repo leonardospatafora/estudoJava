@@ -1,9 +1,5 @@
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-
-import org.apache.commons.io.IOUtils;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class criandoArquivo {
 
@@ -27,23 +23,30 @@ public class criandoArquivo {
 //         printWriter.close();
 		
 		
+//		
+//		try (PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("/usr/socin/novo.txt")));) {
+//			out.println("teste");
+//			out.println("teste");
+//			out.println("teste");
+//			out.println("teste");
+//			out.println("teste");
+//		}catch (IOException e) {
+//			System.out.println("Não rolou");
+//		}
+//         
+//		File file = new File( "/usr/socin/novo.txt" ); 
+//		file.delete();
 		
-		try (PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("/usr/socin/novo.txt")));) {
-			out.println("teste");
-			out.println("teste");
-			out.println("teste");
-			out.println("teste");
-			out.println("teste");
-		}catch (IOException e) {
-			System.out.println("Não rolou");
-		}
-         
+//		int a = 10;
+//		int b = 10;
+//		
+//		String resultado = String.valueOf(a + b);
+//		System.out.println(resultado);
+//		
 		
-		
-		
-		
-		
-		
+		Date data = new Date();
+		SimpleDateFormat formatador = new SimpleDateFormat("yyyy/MM/dd");
+		System.out.println(formatador.format(data));
 
-}
+	}
 }

@@ -1,10 +1,19 @@
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
+
+import CalculadoraDAO.DbConnect;
 
 public class CalculadoraLauncher {
 
@@ -182,7 +191,9 @@ public class CalculadoraLauncher {
 		btnNewButton_12 = new JButton("/");
 		btnNewButton_12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText() + "/");
+				valor1 = Double.parseDouble(textField.getText());
+				textField.setText("");
+				sinal = "divisao";
 			}
 		});
 		btnNewButton_12.setBounds(239, 88, 47, 25);
@@ -191,44 +202,88 @@ public class CalculadoraLauncher {
 		btnNewButton_13 = new JButton("x");
 		btnNewButton_13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText() + "*");
+				
+				valor1 = Double.parseDouble(textField.getText());
+				textField.setText("");
+				sinal = "multi";
 			}
 		});
 		btnNewButton_13.setBounds(239, 135, 47, 25);
 		frame.getContentPane().add(btnNewButton_13);
 		
 		btnNewButton_14 = new JButton("-");
+		
 		btnNewButton_14.addActionListener(new ActionListener() {
+			
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText() + "-");
+				
+				valor1 = Double.parseDouble(textField.getText());
+				textField.setText("");
+				sinal = "subtrai";
 			}
 		});
 		btnNewButton_14.setBounds(239, 182, 47, 25);
 		frame.getContentPane().add(btnNewButton_14);
 		
 		btnNewButton_15 = new JButton("+");
+		
 		btnNewButton_15.addActionListener(new ActionListener() {
+			
 			public void actionPerformed(ActionEvent e) {
-				valor1 = Double.parseDouble(textField.getText());
-				textField.setText("");
-				sinal = "soma";
+				try { 
+					valor1 = Double.parseDouble(textField.getText());
+					textField.setText("");
+					sinal = "soma";
+				}catch (NumberFormatException ex) {
+					System.out.println("Isso daí não é um número boçal");
+				}
 			}
 		});
 		btnNewButton_15.setBounds(239, 228, 47, 25);
 		frame.getContentPane().add(btnNewButton_15);
-		
+
 		btnNewButton_16 = new JButton("=");
 		btnNewButton_16.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
+				
+				DecimalFormat df = new DecimalFormat("0.00");
 				valor2 = Double.parseDouble(textField.getText());
-				if (sinal == "soma") {
-					textField.setText(String.valueOf(valor1+valor2));
+				String tipo = null;
+				double res = 0;
+				
+				if (sinal.equals("soma")) {
+					textField.setText(String.valueOf(df.format(valor1 + valor2)));
+					tipo = "+";
+					res = valor1 + valor2;
+				} else if (sinal.equals("subtrai")) {
+					textField.setText(String.valueOf(df.format(valor1 - valor2)));
+					tipo = "-";
+					res = valor1 - valor2;
+				} else if (sinal.equals("divisao")) {
+					textField.setText(String.valueOf(df.format(valor1 / valor2)));
+					tipo = "/";
+					res = valor1 / valor2;
+				} else if (sinal.equals("multi")) {
+					textField.setText(String.valueOf(df.format(valor1 * valor2)));
+					tipo = "*";
+					res = valor1 * valor2;
+				}
+				
+				try (Connection conn = (Connection) DbConnect.getConexaoMySQL()){
+					PreparedStatement stmt = (PreparedStatement) conn.prepareStatement
+							("INSERT INTO dados_calc (ope,dat,val) VALUES ('" + tipo + "',"
+									+ "'" + getDateTime() + "','" + res +"');");
+					stmt.execute();
+				} catch (SQLException e1) {
+					System.out.println("Deu ruimmm!");
 				}
 			}
+
 		});
 		btnNewButton_16.setBounds(298, 228, 108, 25);
 		frame.getContentPane().add(btnNewButton_16);
-		
+
 		btnNewButton_17 = new JButton("C");
 		btnNewButton_17.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -238,4 +293,12 @@ public class CalculadoraLauncher {
 		btnNewButton_17.setBounds(298, 182, 108, 25);
 		frame.getContentPane().add(btnNewButton_17);
 	}
+	
+	private static String getDateTime() {
+		Date data = new Date();
+		SimpleDateFormat formatador = new SimpleDateFormat("yyyy/MM/dd");
+		return formatador.format(data);
+	}
+	
+	
 }
