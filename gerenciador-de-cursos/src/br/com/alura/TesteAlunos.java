@@ -15,20 +15,26 @@ public class TesteAlunos {
 		
 		Set<String> alunos = new HashSet<>();
 		alunos.add("Leonardo");
-		alunos.add("Leandro ");
 		alunos.add("Luis ");
 		alunos.add("Sergio ");
+		alunos.add("Renan ");
+		alunos.add("Renan");
 		alunos.add("Renan");
 		alunos.add("Renan");
 		alunos.add("Leandro ");
+		alunos.add("Leandro ");
+		alunos.add("Leandro ");
+		alunos.add("Renan ");
 		
 //		System.out.println(alunos);
 		
 //		for (String aluno : alunos) {
 //			System.out.println(aluno);
 		System.out.println(alunos);
+		
+//		#ConcurrentModificationException - Tentando excluir um item numa interação
 		alunos.forEach(aluno -> {
-			if(aluno == "Renan") {
+			if("Renan ".equals(aluno)) {
 				alunos.remove(aluno);
 			}
 		});

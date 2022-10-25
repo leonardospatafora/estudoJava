@@ -231,9 +231,13 @@ public class CalculadoraLauncher {
 			
 			public void actionPerformed(ActionEvent e) {
 				try { 
-					valor1 = Double.parseDouble(textField.getText());
-					textField.setText("");
-					sinal = "soma";
+					if(!textField.getText().substring(0,3).matches("[A-Z]*")) {
+						valor1 = Double.parseDouble(textField.getText());
+						textField.setText("");
+						sinal = "soma";
+					}else {
+						System.out.println("teste");
+					}
 				}catch (NumberFormatException ex) {
 					System.out.println("Isso daí não é um número boçal");
 				}
@@ -299,6 +303,5 @@ public class CalculadoraLauncher {
 		SimpleDateFormat formatador = new SimpleDateFormat("yyyy/MM/dd");
 		return formatador.format(data);
 	}
-	
 	
 }

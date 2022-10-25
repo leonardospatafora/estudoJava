@@ -1,5 +1,4 @@
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.io.File;
 
 public class criandoArquivo {
 
@@ -40,13 +39,15 @@ public class criandoArquivo {
 //		int a = 10;
 //		int b = 10;
 //		
+		
+//		#Teste Com valueOF
 //		String resultado = String.valueOf(a + b);
 //		System.out.println(resultado);
 //		
+//		#Formatando Data
+//		Date data = new Date();
+//		SimpleDateFormat formatador = new SimpleDateFormat("yyyy/MM/dd");
+//		System.out.println(formatador.format(data));
 		
-		Date data = new Date();
-		SimpleDateFormat formatador = new SimpleDateFormat("yyyy/MM/dd");
-		System.out.println(formatador.format(data));
-
 	}
 }
