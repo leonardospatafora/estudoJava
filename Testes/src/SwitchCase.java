@@ -25,7 +25,7 @@ public class SwitchCase {
 		case 4:
 			// Intermec
 			System.out.println("case 1");
-			break;
+			break; 
 
 		}
 
