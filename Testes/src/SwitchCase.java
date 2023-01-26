@@ -4,7 +4,7 @@ public class SwitchCase {
 
 	public static void main(String[] args) {
 
-		int index = 0;
+		int index = 4;
 
 		switch (index) {
 		case 0:
@@ -24,9 +24,15 @@ public class SwitchCase {
 			break;
 		case 4:
 			// Intermec
-			System.out.println("case 1");
-			break; 
-
+			System.out.println("case 4");
+			break;
+		case 5:
+			// Intermec
+			System.out.println("case 5");
+			break;
+		default :
+			System.out.println("default");
+			break;
 		}
 
 	}
