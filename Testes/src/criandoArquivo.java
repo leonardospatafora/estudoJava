@@ -1,4 +1,7 @@
-import java.io.File;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class criandoArquivo {
 
@@ -32,6 +35,21 @@ public class criandoArquivo {
 //		}catch (IOException e) {
 //			System.out.println("Não rolou");
 //		}
+		
+//		PrintWriter out = null;
+//		try {
+//			out = new PrintWriter(new BufferedWriter(new FileWriter("/usr/socin/novo.txt")));
+//			out.println("teste");
+//			out.println("teste");
+//			out.println("teste");
+//			out.println("teste");
+//		}catch(IOException e) {
+//			System.out.println("teste");
+//		} finally {
+//			out.close();
+//		}
+//		
+		
 //         
 //		File file = new File( "/usr/socin/novo.txt" ); 
 //		file.delete();

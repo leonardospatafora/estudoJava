@@ -3,12 +3,12 @@ import java.math.BigDecimal;
 public class TestesAleatorios {
 
 	private static boolean verificarDiaAbertoPdv(int numeroLoja) {
-		int a = 11;
-		if (a == 10) {
-			a = 11;
-			return false;
+		boolean valida = false;
+		if (numeroLoja == 1) {
+			System.out.println("true");
+			valida = true;
 		}
-		return true;
+		return valida;
 	}
 
 	public static void main(String[] args) throws IllegalAccessException {
@@ -47,18 +47,22 @@ public class TestesAleatorios {
 //			throw new IllegalAccessException("Funcionario com salario maior que dez mil não recebe bonus");
 //		}
 		
-	    int number=10;   
-	       // Expressão Switch   
-	       switch(number){   
-	          //Declarações case   
-	          case 10: System.out.println("10");   
-	             break;   
-	          case 20: System.out.println("20");   
-	             break;   
-	          case 30: System.out.println("30");   
-	             break;   
-	           //Declaração default case   
-	           default:System.out.println("Not in 10, 20 or 30");   
-	      }   
+//	    int number=10;   
+//	       // Expressão Switch   
+//	       switch(number){   
+//	          //Declarações case   
+//	          case 10: System.out.println("10");   
+//	             break;   
+//	          case 20: System.out.println("20");   
+//	             break;   
+//	          case 30: System.out.println("30");   
+//	             break;   
+//	           //Declaração default case   
+//	           default:System.out.println("Not in 10, 20 or 30");   
+//	      }   
+		
+		
+		verificarDiaAbertoPdv(1);
+		
 }
 }
