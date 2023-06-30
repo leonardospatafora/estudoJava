@@ -13,6 +13,10 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 
 import CalculadoraDAO.DbConnect;
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
 
 public class CalculadoraLauncher {
 
@@ -64,6 +68,7 @@ public class CalculadoraLauncher {
 	double valor1;
 	double valor2;
 	String sinal;
+	private JLabel lblFiltro;
 
 	/**
 	 * Initialize the contents of the frame.
@@ -230,13 +235,9 @@ public class CalculadoraLauncher {
 			
 			public void actionPerformed(ActionEvent e) {
 				try { 
-					if(!textField.getText().substring(0,3).matches("[A-Z]*")) {
 						valor1 = Double.parseDouble(textField.getText());
 						textField.setText("");
 						sinal = "soma";
-					}else {
-						System.out.println("teste");
-					}
 				}catch (NumberFormatException ex) {
 					System.out.println("Isso daí não é um número boçal");
 				}
@@ -295,6 +296,14 @@ public class CalculadoraLauncher {
 		});
 		btnNewButton_17.setBounds(298, 182, 108, 25);
 		frame.getContentPane().add(btnNewButton_17);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(305, 33, 123, 24);
+		frame.getContentPane().add(comboBox);
+		
+		lblFiltro = new JLabel("Filtro");
+		lblFiltro.setBounds(335, 27, 70, 15);
+		frame.getContentPane().add(lblFiltro);
 	}
 	
 	private static String getDateTime() {
@@ -302,5 +311,4 @@ public class CalculadoraLauncher {
 		SimpleDateFormat formatador = new SimpleDateFormat("yyyy/MM/dd");
 		return formatador.format(data);
 	}
-	
 }
